@@ -1,6 +1,18 @@
-console.log('App.js is running');
+console.log('App.js is running!');
 
-var template = <h2>Live server install but not working </h2>;
-var appRoot = documrnt.getElementById('app');
+// JSX - JavaScript XML
+var template = (
+<div>
+    <h1 id = "live">Saif Shovon</h1>
+    <p>paragraph</p>
+    <ol>
+        <li>Item One1</li>
+        <li>Item Two2</li>
+    </ol>
+</div>
 
-ReactDOM.render(template,appRoot);
+);
+
+var appRoot = document.getElementById('app');
+
+ReactDOM.render(template, appRoot);

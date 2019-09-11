@@ -1,16 +1,37 @@
-console.log('App.js is running');
-// JSX -Javascript XML
+'use strict';
 
-// var template = React.createElemrnt(
-// 	"h1",
-// 	{id:"someid"},
-// 	"Somenthing New"
-// );
-// var appRoot = documrnt.getElementById('app');
-// ReactDOM.render(template,appRoot);
-//var template = <p>hhhhhhhhhh</p>;
-var template = React.createElement("p", {
- id: "someid"
-}, "this is JSX from app.js!!");
+console.log('App.js is running!');
+
+// JSX - JavaScript XML
+var template = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        { id: 'live' },
+        'Saif Shovon'
+    ),
+    React.createElement(
+        'p',
+        null,
+        'paragraph'
+    ),
+    React.createElement(
+        'ol',
+        null,
+        React.createElement(
+            'li',
+            null,
+            'Item One1'
+        ),
+        React.createElement(
+            'li',
+            null,
+            'Item Two2'
+        )
+    )
+);
+
 var appRoot = document.getElementById('app');
-ReactDOM.render(template,appRoot);
+
+ReactDOM.render(template, appRoot);
