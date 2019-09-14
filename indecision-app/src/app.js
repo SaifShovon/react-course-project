@@ -6,12 +6,12 @@ console.log('App.js is running!');
 //render new p tag - if options.length > 0 "Here are your options " "No Option"
 // JSX - JavaScript XML
 
-var app = {
+const app = {
     title : "React tutorial",
     subtitle : 'React is boss of front end',
     options : ['One','Two']
 };
-var template = (
+const template = (
 <div>
     <h1>{app.title}</h1>
     {app.subtitle && <p>{app.subtitle}</p>}
@@ -24,7 +24,7 @@ var template = (
 
 );
 //first name
-var user = {
+const user = {
     age:28
 }
 function getLocation(location){
@@ -34,7 +34,7 @@ function getLocation(location){
         return 'Unknown';
     }
 }
-var templateTwo = (
+const templateTwo = (
     <div>
         <h1>{user.name ? user.name : "Annonymous"}</h1>
         {(user.age && user.age >= 18) && <p>age: {user.age}</p>}
@@ -42,6 +42,6 @@ var templateTwo = (
     </div>
 );
 
-var appRoot = document.getElementById('app');
+const appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
