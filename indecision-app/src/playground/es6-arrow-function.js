@@ -1,5 +1,3 @@
-'use strict';
-
 // const square = function(x){
 //     return x *x;
 // };
@@ -13,8 +11,8 @@
 // };
 // const squareArrow = (x) => x*x;
 // console.log(squareArrow(4));
-//get first name('Mike Smith') -> "Mike"
-//create reguler arrow function
+ //get first name('Mike Smith') -> "Mike"
+ //create reguler arrow function
 //  create arrow function shortand syntax
 
 // const getFirstName = (fullName) => {
