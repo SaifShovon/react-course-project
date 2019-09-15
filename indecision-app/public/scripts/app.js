@@ -1,24 +1,26 @@
 'use strict';
 
-// const square = function(x){
-//     return x *x;
-// };
+// argument object - no longer bound witgh arrow functions
 
-// function square(x){
-//     return x + x;
-// };
+var add = function add(a, b) {
+    //console.log(arguments);
+    return a + b;
+};
+console.log(add(10, 15));
 
-// const squareArrow = (x) => {
-//     return x *x;
-// };
-// const squareArrow = (x) => x*x;
-// console.log(squareArrow(4));
-//get first name('Mike Smith') -> "Mike"
-//create reguler arrow function
-//  create arrow function shortand syntax
+var user = {
+    name: "Saif",
+    cities: ['Magura', 'Dhaka', 'Patuakhali'],
+    printPlacesLived: function printPlacesLived() {
+        var _this = this;
 
-// const getFirstName = (fullName) => {
-//     return fullName.split(' ')[0];
-// };
-// const getFirstName = (fullName) => fullName.split(' ')[0];
-console.log(getFirstName('Saif Shovon'));
+        var that = this;
+        console.log(this.name);
+        console.log(this.cities);
+        this.cities.forEach(function (city) {
+            console.log(_this.name + 'has lived in ' + city);
+        });
+    }
+};
+
+user.printPlacesLived();
