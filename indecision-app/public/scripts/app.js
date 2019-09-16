@@ -15,12 +15,26 @@ var user = {
         var _this = this;
 
         var that = this;
-        console.log(this.name);
-        console.log(this.cities);
-        this.cities.forEach(function (city) {
-            console.log(_this.name + 'has lived in ' + city);
+        // console.log(this.name);
+        // console.log(this.cities);
+        return this.cities.map(function (city) {
+            return _this.name + ' Lives in ' + city;
+        });
+        // this.cities.forEach( (city) =>{
+        //     console.log(this .name + 'has lived in ' + city);
+        // });
+    }
+};
+var multiplier = {
+    number: [10, 20, 30],
+    multiplyBy: 5,
+    multiply: function multiply() {
+        var _this2 = this;
+
+        return this.number.map(function (eachValue) {
+            return eachValue * _this2.multiplyBy;
         });
     }
 };
 
-user.printPlacesLived();
+console.log(multiplier.multiply());

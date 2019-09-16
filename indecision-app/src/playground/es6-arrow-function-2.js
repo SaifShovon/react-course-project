@@ -11,12 +11,20 @@ const user = {
     cities : ['Magura','Dhaka','Patuakhali'],
     printPlacesLived (){
         const that = this;
-        console.log(this.name);
-        console.log(this.cities);
-        this.cities.forEach( (city) =>{
-            console.log(this .name + 'has lived in ' + city);
-        });
+        // console.log(this.name);
+        // console.log(this.cities);
+       return this.cities.map((city) => this.name + ' Lives in '+ city);
+        // this.cities.forEach( (city) =>{
+        //     console.log(this .name + 'has lived in ' + city);
+        // });
     },
 };
+const multiplier = {
+    number : [10,20,30],
+    multiplyBy : 5,
+    multiply (){
+        return this.number.map((eachValue) => eachValue * this.multiplyBy);
+    }
+};
 
-user.printPlacesLived();
+console.log(multiplier.multiply());
