@@ -1,40 +1,95 @@
 'use strict';
 
-// argument object - no longer bound witgh arrow functions
+console.log('App.js is running!');
+//if statements
+//ternary operators
+//Logical and operator
+//only render the subtitle (and p tag) if subtitle exist - logical and operator
+//render new p tag - if options.length > 0 "Here are your options " "No Option"
+// JSX - JavaScript XML
 
-var add = function add(a, b) {
-    //console.log(arguments);
-    return a + b;
+var app = {
+    title: "React tutorial",
+    subtitle: 'React is boss of front end',
+    options: ['One', 'Two']
 };
-console.log(add(10, 15));
-
+var template = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        app.title
+    ),
+    app.subtitle && React.createElement(
+        'p',
+        null,
+        app.subtitle
+    ),
+    React.createElement(
+        'p',
+        null,
+        app.options.length > 0 ? "Here are your options " : "No Option"
+    ),
+    React.createElement(
+        'ol',
+        null,
+        React.createElement(
+            'li',
+            null,
+            'Saif'
+        ),
+        React.createElement(
+            'li',
+            null,
+            'Item Two2'
+        )
+    )
+);
+//first name
 var user = {
-    name: "Saif",
-    cities: ['Magura', 'Dhaka', 'Patuakhali'],
-    printPlacesLived: function printPlacesLived() {
-        var _this = this;
-
-        var that = this;
-        // console.log(this.name);
-        // console.log(this.cities);
-        return this.cities.map(function (city) {
-            return _this.name + ' Lives in ' + city;
-        });
-        // this.cities.forEach( (city) =>{
-        //     console.log(this .name + 'has lived in ' + city);
-        // });
-    }
-};
-var multiplier = {
-    number: [10, 20, 30],
-    multiplyBy: 5,
-    multiply: function multiply() {
-        var _this2 = this;
-
-        return this.number.map(function (eachValue) {
-            return eachValue * _this2.multiplyBy;
-        });
-    }
+    age: 28
 };
 
-console.log(multiplier.multiply());
+var count = 0;
+var addOne = function addOne() {
+    console.log("AddOne");
+};
+
+var minusOne = function minusOne() {
+    console.log("MinusOne");
+};
+
+var reset = function reset() {
+    console.log("Reset");
+};
+
+var templateTwo = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        'Count: ',
+        count
+    ),
+    React.createElement(
+        'button',
+        { onClick: minusOne },
+        '-1'
+    ),
+    React.createElement(
+        'button',
+        { onClick: addOne },
+        '+1'
+    ),
+    React.createElement(
+        'button',
+        { onClick: reset },
+        'Reset'
+    )
+);
+
+var appRoot = document.getElementById('app');
+
+ReactDOM.render(templateTwo, appRoot);
