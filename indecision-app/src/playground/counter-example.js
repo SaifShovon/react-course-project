@@ -1,3 +1,4 @@
+
 class Counter extends React.Component {
 
     constructor(props){
@@ -5,20 +6,43 @@ class Counter extends React.Component {
         this.handleAddOne = this.handleAddOne.bind(this);
         this.handleMinusOne = this.handleMinusOne.bind(this);
         this.handleReset = this.handleReset.bind(this);
+        this.state = {
+            count : 0,
+            name : "Saif"
+        }
     }
     handleAddOne(){
-        console.log("Handle add One");
+        this.setState((prevState) => {
+            return {
+                count : prevState.count +1,
+                name : "Saif"
+            };
+        });
+        //this.state.count = this.state.count +1;
+        //console.log(this.state.count);
     }
     handleMinusOne(){
-        console.log("Handle Minus One");
+        this.setState((prevState) => {
+            return {
+                count : prevState.count - 1,
+                name : "Noman"
+            };
+            
+        });
     }
     handleReset(){
-        console.log("Handle Reset");
+        this.setState(() => {
+            return {
+                count : 0,
+                name : "Tusher"
+            } 
+        });
     }
     render(){
         return(
             <div>
-                <h1>Count:</h1>
+            {this.state.name}
+                <h1>Count: {this.state.count}</h1>
                 <button onClick ={this.handleAddOne}>+1</button>
                 <button onClick ={this.handleMinusOne}>-1</button>
                 <button onClick ={this.handleReset}>Reset</button>
