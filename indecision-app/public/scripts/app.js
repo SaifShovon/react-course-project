@@ -57,6 +57,20 @@ var Counter = function (_React$Component) {
                     name: "Tusher"
                 };
             });
+            // this.setState((prevState) => {
+            //     return {
+            //         count : prevState.count + 1,
+            //         name : "Tusher"
+            //     };
+            // });
+
+            // this.setState({
+            //     count : 0
+            // })
+
+            // this.setState({
+            //     count :this.state.count +1
+            // })
         }
     }, {
         key: "render",
