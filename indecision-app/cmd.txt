@@ -22,3 +22,5 @@ es6:
 es6 classes-1: CHOKIDAR_USEPOLLING=true babel src/playground/es6-classes-1.js --out-file=public/scripts/app.js --presets=env,react --watchg
 
 CHOKIDAR_USEPOLLING=true babel src/playground/counter-example.js --out-file=public/scripts/app.js --presets=env,react --watchg
+
+ CHOKIDAR_USEPOLLING=true babel src/playground/build-it-vissible.js --out-file=public/scripts/app.js --presets=env,react --watchg
